@@ -50,74 +50,100 @@ header nav ul li{
 }
 
 
-main section{
+main section.home{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 65px 165px;
 }
 
-main section article{
-    width: 580px;
+main section.home article{
+    width: 40%;
 }
 
-main section article:nth-child(1){
-    width: 440px;
+main section.home article:nth-child(1){
+    width: 50%;
 }
 
-main section article h2{
+main section.home article h2{
     color: #232C50;
     font-weight: bold;
     font-size: 58px;
     line-height: 66px;
 }
 
-main section article p{
+main section.home article p{
     text-align: left;
     width: 350px;
     padding: 28px 0;
 }
 
-main section:nth-child(2){
-    padding-top: 100px;
+main section.sobre_nosotros{
+    padding: 100px 163px;
+    display: flex;
 }
 
-main section:nth-child(2) article h3{
+main section.sobre_nosotros article h3{
     color: #232851;
     font-weight: bold;
     font-size: 36px;
     line-height: 114.6%;
 }
 
-main section:nth-child(2) article ol{
+main section.sobre_nosotros article ol li{
+    list-style-type: none;
+    counter-reset: list-item;
 }
 
-main section:nth-child(2) article ol li span{
-color: #323851;
-font-weight: bold;
-line-height: 23px;
+main section.sobre_nosotros article ol li span{
+    counter-increment: list-item;
+    margin: 23px;
+    color: #323851;
+    font-weight: bold;
+    line-height: 23px;
+    display: block;
 }
 
-main section:nth-child(2) article ol li p{
+main section.sobre_nosotros article ol li span::before{
+    background: #F3613C;
+    color: white;
+    width: 70px;
+    height: 43px;
+    display: block;
+    content: "0" counter(list-item);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 34px;
+    margin-right: 23px;
+    order: -1;
+}
+
+
+main section.sobre_nosotros article ol li p{
     color: #B3B2B7;
     line-height: 26px;
-    width: 100%;
+    padding-left: 93px;
+    width: 458px;
 }
 
-main section:nth-child(3){
+main section.testimonios{
+    display:flex;
+    flex-direction: column;
     width: 100%;
     justify-content: center;
     align-items: center;
     padding: 71px;
+    text-align: center;
 }
 
-main section:nth-child(3) h3{
+main section.testimonios h3{
     text-align: center;
     font-size: 40px;
     font-weight: bold;
 }
 
-main section:nth-child(3) div{
+main section.testimonios div{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -127,45 +153,42 @@ main section:nth-child(3) div{
 }
 
 
-main section:nth-child(3) div article{
+
+main section.testimonios div article{
     background: #FAFAFA;
     text-align: center;
-    width: 445px;
+    width: 30%;
 }
 
-main section:nth-child(3) div article img{
+main section.testimonios div article img{
     width: 70px;
     position: relative;
     bottom: 35px;
 }
 
-main section:nth-child(3) div article span{
+main section.testimonios div article span{
     display: block;
     font-weight: bold;
     color: #3F4868;
     
 }
 
-main section:nth-child(3) div article p{
+main section.testimonios div article p{
     color: #B9B9C1;
     padding: 21px;
     width: 100%;
     text-align: center;
 }
 
-main section:nth-child(3) button{
-    margin-top: 45px;
-}
-
 main section:nth-child(4){
     background: #F3613C;
     padding-top: 64px;
     padding-bottom: 64px;
-    margin-top: 180px;
     width: 100%;
     padding: 64px 165px;
     color: white;
     align-items: center;
+    display: inline-flex;
 }
 
 main section:nth-child(4) h2{
@@ -178,6 +201,7 @@ main section:nth-child(4) h2{
 main section:nth-child(4) button{
     color: #F3613C;
     background: white;
+    margin-left: 30%;
 }
 
 footer{
