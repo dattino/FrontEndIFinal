@@ -8,6 +8,7 @@
 body{
     font-family: 'Be Vietnam', sans-serif;
     font-size: 16px;
+    letter-spacing: -0.015em;
 }
 
 a{
@@ -58,18 +59,17 @@ main section.home{
 }
 
 main section.home article{
-    width: 40%;
+    width: 40%
 }
 
-main section.home article:nth-child(1){
-    width: 50%;
-}
+
 
 main section.home article h2{
     color: #232C50;
     font-weight: bold;
     font-size: 58px;
     line-height: 66px;
+    letter-spacing: -0.035em;
 }
 
 main section.home article p{
@@ -78,9 +78,18 @@ main section.home article p{
     padding: 28px 0;
 }
 
+main section.home article img{
+    width: 100%;
+}
+
 main section.sobre_nosotros{
     padding: 100px 163px;
     display: flex;
+    justify-content: space-between;
+}
+
+main section.sobre_nosotros article:nth-child(1){
+    width: 433px;
 }
 
 main section.sobre_nosotros article h3{
@@ -88,6 +97,7 @@ main section.sobre_nosotros article h3{
     font-weight: bold;
     font-size: 36px;
     line-height: 114.6%;
+    margin-bottom: 36px;
 }
 
 main section.sobre_nosotros article ol li{
@@ -97,7 +107,6 @@ main section.sobre_nosotros article ol li{
 
 main section.sobre_nosotros article ol li span{
     counter-increment: list-item;
-    margin: 23px;
     color: #323851;
     font-weight: bold;
     line-height: 23px;
@@ -123,8 +132,10 @@ main section.sobre_nosotros article ol li span::before{
 main section.sobre_nosotros article ol li p{
     color: #B3B2B7;
     line-height: 26px;
-    padding-left: 93px;
-    width: 458px;
+    padding-left: 92px;
+    letter-spacing: -0.01em;
+    width: 553px;
+    margin-bottom: 42px;
 }
 
 main section.testimonios{
@@ -181,14 +192,14 @@ main section.testimonios div article p{
 }
 
 main section:nth-child(4){
+    display: inline-flex;
     background: #F3613C;
-    padding-top: 64px;
-    padding-bottom: 64px;
     width: 100%;
     padding: 64px 165px;
     color: white;
-    align-items: center;
-    display: inline-flex;
+    align-items:center;
+    justify-content: space-between;
+
 }
 
 main section:nth-child(4) h2{
@@ -201,7 +212,6 @@ main section:nth-child(4) h2{
 main section:nth-child(4) button{
     color: #F3613C;
     background: white;
-    margin-left: 30%;
 }
 
 footer{
@@ -210,12 +220,23 @@ footer{
     flex-direction: row;
     color: white;
     padding: 52px 165px;
-    justify-content: space-evenly;
+    justify-content: space-between;
+}
+
+footer div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    
+}
+
+footer div img.LogoFooter{
+    width: 150px;
 }
 
 footer div img{
     height: 26px;
-    margin-bottom: 67px;
 }
 
 footer div ul.redes{
@@ -237,16 +258,30 @@ footer div ul.redes li:nth-child(2) a img{
 }
 
 footer div.indice{
-    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 40%;
+
 }
 
 footer div.indice ul{
     list-style-type: none;
-    padding: 0 135px ;
 }
 
 footer div.indice ul li{
     margin-bottom: 10px;
+}
+
+footer div:nth-child(3){
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+footer div form{
+    display: inline-flex;
 }
 
 footer div form input{
@@ -272,5 +307,6 @@ footer div span{
     display: block;
     color: #8C8C94;
     font-size: 12.5px;
-    margin-top: 73px;
+    text-align: right;
 }
+
