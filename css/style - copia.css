@@ -3,7 +3,6 @@
 *{
     box-sizing: border-box;
     margin: 0;
-    border: solid red 2px;
 }
 
 body{
@@ -18,10 +17,6 @@ a{
     color: #242E52;
 }
 
-button{
-    cursor: pointer;
-}
-
 button.GS{
     display: flex;
     padding: 12px 30px;
@@ -32,6 +27,7 @@ button.GS{
     border-radius: 50px;    
     width: 134px;
     height: 44px;
+    cursor: pointer;
 }
 
 header{
@@ -56,18 +52,18 @@ header nav ul li{
 }
 
 
-main section.home{
+main section:nth-of-type(1){
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     padding: 65px 165px;
 }
 
-main section article{
+main section:nth-of-type(1) article{
     width: 40%
 }
 
-main section.home article h2{
+main section:nth-of-type(1) article h2{
     color: #232C50;
     font-weight: bold;
     font-size: 58px;
@@ -75,30 +71,32 @@ main section.home article h2{
     letter-spacing: -0.035em;
 }
 
-main section article p{
+main section:nth-of-type(1) article p{
     text-align: left;
-    width: 70%;
+    width: 30%;
     padding: 28px 0;
 }
 
-main section.home article img{
-    width: 100%;
+main section:nth-of-type(1) article img{
+    width: 580px;
 }
 
-main section.sobre_nosotros article{
-    width: 40%;
-}
-main section.sobre_nosotros article:nth-of-type(2){
-    width: 50%;
-}
-
-main section.sobre_nosotros{
+main section:nth-of-type(2){
     padding: 100px 163px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-main section.sobre_nosotros article h3{
+main section:nth-of-type(2) article{
+    width: 50%;
+}
+
+main section:nth-of-type(2) article:nth-of-type(1){
+    width: 40%;
+}
+
+main section:nth-of-type(2) article h3{
     color: #232851;
     font-weight: bold;
     font-size: 36px;
@@ -106,49 +104,36 @@ main section.sobre_nosotros article h3{
     margin-bottom: 36px;
 }
 
-main section.sobre_nosotros article p{
-    width: 70%;
-}
 
-main section.sobre_nosotros article ol{
+main section:nth-of-type(2) article:nth-of-type(2) ol li{
     list-style-type: none;
-    counter-reset: olnumero;
+    counter-reset: item-list;
 }
 
-main section.sobre_nosotros article ol li{
-    counter-increment: olnumero;
+main section:nth-of-type(2) article:nth-of-type(2) ol li span{
+    counter-increment: item-list;
     color: #323851;
     font-weight: bold;
     line-height: 23px;
     display: block;
 }
 
-main section.sobre_nosotros article ol li::before{
-    position: relative;
+main section:nth-of-type(2) article:nth-of-type(2) ol li span::before{
     background: #F3613C;
     color: white;
-    font-size: 16px;
-    text-align: center;
-    padding: 0 25px 10px 25px;
-    border-radius: 25px;
+    width: 70px;
+    height: 43px;
     display: block;
-    content: "0" counter(olnumero);
-    display: inline-block;
+    content: "0" counter(item-list);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 34px;
     margin-right: 23px;
     order: -1;
 }
 
-
-main section.sobre_nosotros article ol li p{
-    color: #B3B2B7;
-    line-height: 26px;
-    padding-left: 92px;
-    letter-spacing: -0.01em;
-    margin-bottom: 42px;
-    width: 100%;
-}
-
-main section.testimonios{
+main section:nth-of-type(3){
     display:flex;
     flex-direction: column;
     width: 100%;
@@ -158,13 +143,13 @@ main section.testimonios{
     text-align: center;
 }
 
-main section.testimonios h3{
+main section:nth-of-type(3) h3{
     text-align: center;
     font-size: 40px;
     font-weight: bold;
 }
 
-main section.testimonios div{
+main section:nth-of-type(3) div{
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -175,33 +160,33 @@ main section.testimonios div{
 
 
 
-main section.testimonios div article{
+main section:nth-of-type(3) div article{
     background: #FAFAFA;
     text-align: center;
     width: 30%;
 }
 
-main section.testimonios div article img{
+main section:nth-of-type(3) div article img{
     width: 70px;
     position: relative;
     bottom: 35px;
 }
 
-main section.testimonios div article span{
+main section:nth-of-type(3) div article span{
     display: block;
     font-weight: bold;
     color: #3F4868;
     
 }
 
-main section.testimonios div article p{
+main section:nth-of-type(3) div article p{
     color: #B9B9C1;
     padding: 21px;
     width: 100%;
     text-align: center;
 }
 
-main section:nth-child(4){
+main section:nth-of-type(4){
     display: inline-flex;
     background: #F3613C;
     width: 100%;
@@ -212,14 +197,14 @@ main section:nth-child(4){
 
 }
 
-main section:nth-child(4) h2{
+main section:nth-of-type(4) h2{
     font-weight: bold;
     font-size: 40px;
     line-height: 48px;
-    width: 450px;
+    width: 50%;
 }
 
-main section:nth-child(4) button{
+main section:nth-of-type(4) button{
     color: #F3613C;
     background: white;
 }
@@ -262,7 +247,7 @@ footer div ul.redes li a i{
     font-size: 20px;
 }
 
-footer div ul.redes li:nth-child(2) a img{
+footer div ul.redes li:nth-of-type(2) a img{
     height: 20px;
     margin:  0px;
 }
@@ -283,7 +268,7 @@ footer div.indice ul li{
     margin-bottom: 10px;
 }
 
-footer div:nth-child(3){
+footer div:nth-of-type(3){
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -313,7 +298,7 @@ footer div form button{
 
 }
 
-footer div span{
+footer span{
     display: block;
     color: #8C8C94;
     font-size: 12.5px;
@@ -322,60 +307,27 @@ footer div span{
 
 @media (max-width: 400px){
 
-    header{
-        padding: 10px;
-        display: inline-flex;
-        justify-content: center;
-        align-items: center;
-        width: 100%;
-    }
-
-    header nav{
-        display: none;
-    }
-
-    header button.GS{
-        display: none;
-    }
-
-    header h1{
-    display: flex;
-    align-items: center;
-    text-align: center;
-    }
-
-    header h1::after{
-        position: relative;
-        bottom: 5px;
-        content: url(../img/icon-hamburger.svg);
-        width: 20px;
-        margin-left: 40vw;
-        align-items: center;
-        cursor: pointer
-    }
-
-    main section.home{
+    main section{
+        flex-wrap: wrap;
         padding: 50px 0;
         width: 100%;
-        flex-direction: column-reverse;
-        text-align: center;
+        flex-direction: column;
+        align-items: center;
     }
 
-    main section:nth-of-type(1) article{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
+    main section article{
+        flex-direction: row;
+        width: 100vw;
         justify-content: space-between;
-        align-items: center;
     }
 
     main section article h2{
         display: flex;
-        width: 100%;
+        width: 100vw;
     }
 
     main section article p{
-        width: 100%;
+        width: 100vw;
     }
 
     main section article:nth-of-type(2) img{
@@ -389,28 +341,24 @@ footer div span{
         flex-wrap: nowrap;
     }
 
+    
     main section:nth-of-type(2) article{
         display: flex;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         width: 100%;
         justify-content: space-evenly;
         flex-direction: column;
     }
 
-    main section.sobre_nosotros article:nth-of-type(2){
-        width: 100%;
-    }
-
     main section:nth-of-type(2) article h3{
         display: flex;
+        flex-wrap: nowrap;
         align-items: center;
         width: 100%;
-        text-align: center;
     }
 
-        main section:nth-of-type(2) article p{
+    main section:nth-of-type(2) article p{
         width: 100%;
-        text-align: center;
     }
 
     main section:nth-of-type(2) article:nth-of-type(2) ol{
@@ -421,7 +369,6 @@ footer div span{
     main section:nth-of-type(2) article:nth-of-type(2) ol li span{
         width: 100%;
         background: rgba(243, 97, 60, 0.3);
-        flex-wrap: nowrap;
     }
 
     main section:nth-of-type(2) article:nth-of-type(2) ol li p{
@@ -429,10 +376,6 @@ footer div span{
         padding: 0px;
         margin-top: 10px;
         margin-bottom: 20px;
-    }
-
-    main section.sobre_nosotros article ol li::before {
-    margin: 0;
     }
 
     main section:nth-of-type(3){
